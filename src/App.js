@@ -1,7 +1,13 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const hypotheticalHTML = '';
+  const s = DOMPurify.sanitize(hypotheticalHTML); // Does not provide import suggestions
+  const t = cloneDeep(''); // Does provide import suggestions
+  const d = moment().format('MMMM Do YYYY, h:mm:ss a'); // Does not provide import suggestions
+  const p = (<Portal>my portal</Portal>) //Does provide import suggestions
   return (
     <div className="App">
       <header className="App-header">
